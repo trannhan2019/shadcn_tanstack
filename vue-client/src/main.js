@@ -2,6 +2,7 @@ import "./assets/index.css";
 
 import { createApp } from "vue";
 import { createPinia } from "pinia";
+import { VueQueryPlugin } from "@tanstack/vue-query";
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -31,6 +32,8 @@ const app = createApp(App);
 
 app.use(createPinia());
 app.use(router);
+app.use(VueQueryPlugin);
+
 app.component("Input", Input);
 app.component("Label", Label);
 app.component("Button", Button);
