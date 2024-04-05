@@ -22,7 +22,12 @@ const router = createRouter({
     {
       path: "/products",
       name: "products",
-      component: () => import("../views/Product.vue"),
+      component: () => import("../views/product/Product.vue"),
+    },
+    {
+      path: "/products-table",
+      name: "products-table",
+      component: () => import("../views/product/ProductTable.vue"),
     },
     {
       path: "/about",
